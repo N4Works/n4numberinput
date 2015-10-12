@@ -1,7 +1,7 @@
 {
   "name": "n4numberinput",
-  "main": "n4numberinput.js",
-  "version": "0.0.1",
+  "main": "dist/n4numberinput.js",
+  "version": "0.0.2",
   "homepage": "https://github.com//n4numberinput",
   "authors": [
     "N4Works <contato@n4works.com>"
