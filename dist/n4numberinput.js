@@ -1,22 +1,22 @@
-"use strict";
-
 ;
 (function(ng) {
+  "use strict";
+
   ng
-    .module('n4NumberInput', [])
-    .directive('n4NumberInput', [
+    .module("n4NumberInput", [])
+    .directive("n4NumberInput", [
       function() {
         return {
-          require: 'ngModel',
-          restrict: 'EAC',
+          require: "ngModel",
+          restrict: "EAC",
           replace: true,
-          template: '<input type="text">',
+          template: "<input type=\"text\">",
           link: function(scope, element, attrs, controller) {
             var getFormattedValue = function(value) {
                 if (!value) {
-                  return '';
+                  return "";
                 }
-                return value.trim().replace(/[^0-9]/g, '');
+                return value.trim().replace(/[^0-9]/g, "");
               },
               parseValue = function(value) {
                 var formattedValue = getFormattedValue(value);
@@ -35,4 +35,4 @@
       }
     ]);
 
-}(angular))
+}(angular));
