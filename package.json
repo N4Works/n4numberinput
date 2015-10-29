@@ -1,6 +1,6 @@
 {
-  "name": "n4numberinput",
-  "version": "0.0.1",
+  "name": "n4-numberinput-directive",
+  "version": "1.0.0",
   "main": "src/n4numberinput.js",
   "scripts":
   {
@@ -30,7 +30,7 @@
   },
   "author": "N4Works",
   "license": "MIT",
-  "bugs": 
+  "bugs":
   {
     "url": "https://github.com/N4Works/n4numberinput/issues"
   },
