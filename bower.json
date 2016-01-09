@@ -1,7 +1,7 @@
 {
   "name": "n4-numberinput-directive",
   "main": "dist/n4numberinput.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com//n4numberinput",
   "authors": [
     "N4Works <contato@n4works.com>"

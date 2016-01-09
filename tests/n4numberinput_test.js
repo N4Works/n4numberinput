@@ -74,13 +74,5 @@ describe('n4NumberInput', function() {
       expect($scope.value).toBe('0123456789');
       expect(element.val()).toBe('0123456789');
     });
-
-    it('Shoud fullfill the input on async method', function () {
-      $timeout(function () {
-        $scope.value = '21484441000186';
-      });
-      $timeout.flush();
-      expect(element.val()).toBe('21484441000186')
-    })
   });
 });

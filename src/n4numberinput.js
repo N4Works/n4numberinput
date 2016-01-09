@@ -21,7 +21,7 @@
               parseValue = function(value, oldValue) {
                 var formattedValue = getFormattedValue(value);
 
-                if ((formattedValue !== value) && (!!formattedValue ^ !!oldValue)) {
+                if (formattedValue !== value) {
                   controller.$setViewValue(formattedValue);
                   controller.$render();
                 }
