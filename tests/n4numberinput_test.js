@@ -1,13 +1,14 @@
 'use strict';
 
 describe('n4NumberInput', function() {
-  var $scope, $compile;
+  var $scope, $compile, $timeout;
 
   beforeEach(module('n4NumberInput'));
 
-  beforeEach(inject(function(_$rootScope_, _$compile_) {
+  beforeEach(inject(function(_$rootScope_, _$compile_, _$timeout_) {
     $scope = _$rootScope_.$new();
     $compile = _$compile_;
+    $timeout = _$timeout_;
   }));
 
   describe('Creation', function() {
@@ -73,5 +74,13 @@ describe('n4NumberInput', function() {
       expect($scope.value).toBe('0123456789');
       expect(element.val()).toBe('0123456789');
     });
+
+    it('Shoud fullfill the input on async method', function () {
+      $timeout(function () {
+        $scope.value = '21484441000186';
+      });
+      $timeout.flush();
+      expect(element.val()).toBe('21484441000186')
+    })
   });
 });

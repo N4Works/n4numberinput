@@ -18,10 +18,10 @@
                 }
                 return value.trim().replace(/[^0-9]/g, "");
               },
-              parseValue = function(value) {
+              parseValue = function(value, oldValue) {
                 var formattedValue = getFormattedValue(value);
 
-                if (formattedValue !== value) {
+                if ((formattedValue !== value) && (!!formattedValue ^ !!oldValue)) {
                   controller.$setViewValue(formattedValue);
                   controller.$render();
                 }
